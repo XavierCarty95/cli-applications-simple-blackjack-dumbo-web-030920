@@ -44,14 +44,17 @@ end
 
 def hit?(total)
   # code hit? here
-  puts prompt_user
+   prompt_user
   puts get_user_input
   input = get_user_input
   if input == 'h'
     total +=  deal_card
 
- elsif input !== 'h' && input !== 's'
-     puts invalid_command
+ elsif input = 's'
+     total
+  else
+    invalid_command
+    hit?(total)
 
   end
   total
